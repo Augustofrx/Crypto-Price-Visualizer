@@ -1,7 +1,7 @@
 import React from 'react'
-import { Coin_row } from './Coin_row'
+import { CoinRow } from './Coin_row'
 
-export const Table_coins = ({ coins, search }) => {
+export const TableCoins = ({ coins, search }) => {
 
     const Titles = ['#', 'Coin', 'Price', 'Price Change', '24h Volume'];
 
@@ -18,7 +18,7 @@ export const Table_coins = ({ coins, search }) => {
             </thead>
             <tbody>
                 {filtered_coins.map((coin, index) => (
-                    <Coin_row coin={coin} key={coin.id} index={index + 1} />
+                    <CoinRow coin={coin} key={coin.id} index={index + 1} />
                 ))}
             </tbody>
         </table>
