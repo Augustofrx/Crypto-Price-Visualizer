@@ -10,7 +10,7 @@ function App() {
   const [search, setSearch] = useState('');
   const [weatherData, setWeatherData] = useState({})
   const [currency, setCurrency] = useState('USD')
-
+   
   const handleCurrencyChange = (e) => {
     setCurrency( e ? e.target.value : currency)
    fetchCurrency(currency)
