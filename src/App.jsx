@@ -32,11 +32,11 @@ function App() {
   return (
     <div className="container">
       <header className="mt-2 text-center fs-4 fw-bolder">
-        Welcome to Crypto Price Visualizer
+        Welcome to Crypto Price Visualizer, enjoy looking for information about your favorite crypto !
       </header>
       <div className="d-flex mt-4">
         <label htmlFor="Currency" className="me-2 fs-5">
-          <strong>Select Currency</strong>
+          <strong>Select currency exchange </strong>
         </label>
         <select
           name="Currency"
