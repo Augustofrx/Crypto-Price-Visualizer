@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import './App.css';
 import axios from 'axios';
 import { TableCoins } from './Components/Table_coins';
@@ -11,10 +11,10 @@ function App() {
   const [weatherData, setWeatherData] = useState({})
   const [currency, setCurrency] = useState('USD')
    
-  const handleCurrencyChange = (e) => {
+  const handleCurrencyChange = useCallback (e => {
     setCurrency( e ? e.target.value : currency)
    fetchCurrency(currency)
-  }
+  }, [currency] )
 
   const fetchCurrency = async (currency) => {
     const res = await axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency === 'USD' ? 'USD' : 'ARS'}&order=market_cap_desc&per_page=100&page=1&sparkline=false`);
@@ -34,7 +34,7 @@ function App() {
   useEffect(() => {
     handleCurrencyChange()
     getWeatherData();
-  })
+  }, [currency, weatherData, coins, handleCurrencyChange ])
 
 
   return (
