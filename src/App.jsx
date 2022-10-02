@@ -34,7 +34,7 @@ function App() {
   useEffect(() => {
     handleCurrencyChange()
     getWeatherData();
-  }, [currency, weatherData])
+  }, [currency, weatherData, handleCurrencyChange])
 
 
   return (
