@@ -5,11 +5,9 @@ import { Home } from "./Components/Home";
 function App() {
   return (
     <Router>
-      <div className="App">
         <Routes>
           <Route exact path="/" element={<Home />} />
         </Routes>
-      </div>
     </Router>
   );
 }
