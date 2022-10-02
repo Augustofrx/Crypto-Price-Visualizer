@@ -18,7 +18,9 @@ export const TableCoins = ({ coins, search }) => {
             </thead>
             <tbody>
                 {filtered_coins ? filtered_coins.map((coin, index) => (
-                    <CoinRow coin={coin} key={coin.id} index={index + 1} />
+                    coin ? 
+                    <CoinRow coin={coin} key={coin.id} index={index + 1} /> :
+                    ""
                 )): ""}
             </tbody>
         </table>
