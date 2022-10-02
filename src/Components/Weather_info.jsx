@@ -8,7 +8,7 @@ export const WeatherInfo = ({ weatherData }) => {
     <div className="container">
       <div className="d-flex flex-row-reverse mt-2 ">
         <p className="ms-4 me-0"><strong>{temp ? temp : ""} ºC</strong></p>
-        <p><strong>{name}</strong></p>
+        <p><strong>{name ? name : ""}</strong></p>
       </div>
     </div>
   );
