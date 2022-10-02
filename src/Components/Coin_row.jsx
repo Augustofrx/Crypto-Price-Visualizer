@@ -3,7 +3,7 @@ import React from 'react'
 
 export const CoinRow = ({ coin, index }) => {
 <script src="./styles.css"></script>
-    let {name, image, symbol, current_price, price_change_percentage_24h, total_volume } = coin
+    let {name, image, symbol, current_price, price_change_percentage_24h, total_volume } = coin ? coin : ''
     return (
         <tr >
             <td>{index}</td>
