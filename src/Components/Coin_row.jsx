@@ -8,7 +8,7 @@ export const CoinRow = ({ coin, index }) => {
         <tr >
             <td>{index}</td>
             <td>
-                <img src={image} alt={name} style={{width: '5%'}}className=" img-container img-fluid me-4" />
+                <img src={image ? image : ""} alt={name} style={{width: '5%'}}className=" img-container img-fluid me-4" />
                 <span>{name}</span>
                 <span className='ms-3 text-muted text-uppercase'>{symbol}</span></td>
             <td>$ {current_price}</td>
