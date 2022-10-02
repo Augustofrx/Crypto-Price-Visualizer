@@ -11,7 +11,7 @@ export const CoinRow = ({ coin, index }) => {
                 <img src={image} alt={name} style={{width: '5%'}}className=" img-container img-fluid me-4" />
                 <span>{name}</span>
                 <span className='ms-3 text-muted text-uppercase'>{symbol}</span></td>
-            <td>ARS: ${current_price}</td>
+            <td>$ {current_price}</td>
             <td className={price_change_percentage_24h > 0 ? 'text-success' : 'text-danger'}>
                 {price_change_percentage_24h}
             </td>

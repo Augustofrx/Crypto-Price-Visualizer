@@ -5,7 +5,7 @@ export const TableCoins = ({ coins, search }) => {
 
     const Titles = ['#', 'Coin', 'Price', 'Price Change', '24h Volume'];
 
-    const filtered_coins = coins.filter((coin) => coin.name.toLowerCase().includes(search.toLowerCase()) || coin.symbol.toLowerCase().includes(search.toLowerCase()))
+    const filtered_coins = coins? coins.filter((coin) => coin.name.toLowerCase().includes(search.toLowerCase()) || coin.symbol.toLowerCase().includes(search.toLowerCase())) : ""
 
     return (
         <table className='table table-dark mt-4 table-hover'>
@@ -17,9 +17,9 @@ export const TableCoins = ({ coins, search }) => {
                 </tr>
             </thead>
             <tbody>
-                {filtered_coins.map((coin, index) => (
+                {filtered_coins ? filtered_coins.map((coin, index) => (
                     <CoinRow coin={coin} key={coin.id} index={index + 1} />
-                ))}
+                )): ""}
             </tbody>
         </table>
     )
