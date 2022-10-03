@@ -8,7 +8,8 @@ const rootReducer = (state = inititalState, action) => {
     case "SET_FAVORITES": {
       return { ...state, favorites: action.payload };
     }
-  }
-  return state;
+    default:
+      return state;
+    };
 };
 export default rootReducer;

@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { TableCoins } from "./Table_coins";
 import fetchCurrency from "../Utils/fetchCurrency";
 import { Link } from "react-router-dom";
-import { useLocalStorage } from "../Utils/useLocalStorage";
+// import { useLocalStorage } from "../Utils/useLocalStorage";
 import "../../src/App.css";
 
 export const Home = () => {
@@ -48,7 +48,7 @@ export const Home = () => {
         </div>
         <div className=" pd-4  border-0 rounded-1 p-1">
           <Link to="/favorites" className="link">
-            <a href="#" className="link">
+            <a href="/favorites" className="link">
               My Favorites
             </a>
           </Link>
