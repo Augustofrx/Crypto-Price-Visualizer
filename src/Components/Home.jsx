@@ -1,7 +1,7 @@
 import React from "react";
 
 import { CurrencyFormAndSearch } from "./SelectCurrencyForm";
-// import { useLocalStorage } from "../Utils/useLocalStorage";
+import {Toaster} from 'react-hot-toast'
 import "../../src/App.css";
 
 export const Home = () => {
@@ -14,6 +14,7 @@ export const Home = () => {
       <nav className="d-flex mt-4 justify-content-between">
         <CurrencyFormAndSearch />
       </nav>
+      <Toaster/>
     </div>
   );
 };
