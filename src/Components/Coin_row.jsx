@@ -1,4 +1,5 @@
 import React from "react";
+import "../../src/App.css";
 
 export const CoinRow = ({ coin, index, currency }) => {
   <script src="./styles.css"></script>;
@@ -37,7 +38,7 @@ export const CoinRow = ({ coin, index, currency }) => {
         {currency === "USD" ? "US$" : "$"} {total_volume}
       </td>
       <td>
-        <i>icon</i>
+      <button className="favorite_btn"><ion-icon name="star"/></button>
       </td>
     </tr>
   );

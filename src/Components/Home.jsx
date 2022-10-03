@@ -49,7 +49,7 @@ export const Home = () => {
         <div className=" pd-4  border-0 rounded-1 p-1">
           <Link to="/favorites" className="link">
             <a href="/favorites" className="link">
-              My Favorites
+              My favorites <ion-icon name="star"/>
             </a>
           </Link>
         </div>
