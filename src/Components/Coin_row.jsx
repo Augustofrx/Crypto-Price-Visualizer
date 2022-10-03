@@ -1,8 +1,9 @@
-import React from "react";
+import { setCurrencySymbol } from "../Utils/setCurrencySymbol";
+import { FavoriteBtn } from "./FavoriteBtn";
+
 import "../../src/App.css";
 
 export const CoinRow = ({ coin, index, currency }) => {
-  <script src="./styles.css"></script>;
   let {
     name,
     image,
@@ -11,6 +12,7 @@ export const CoinRow = ({ coin, index, currency }) => {
     price_change_percentage_24h,
     total_volume,
   } = coin;
+
   return (
     <tr>
       <td>{index}</td>
@@ -25,7 +27,7 @@ export const CoinRow = ({ coin, index, currency }) => {
         <span className="ms-3 text-muted text-uppercase">{symbol}</span>
       </td>
       <td>
-        {currency === "USD" ? "US$" : "$"} {current_price}
+        {setCurrencySymbol(currency)} {current_price}
       </td>
       <td
         className={
@@ -38,7 +40,7 @@ export const CoinRow = ({ coin, index, currency }) => {
         {currency === "USD" ? "US$" : "$"} {total_volume}
       </td>
       <td>
-      <button className="favorite_btn"><ion-icon name="star"/></button>
+        <FavoriteBtn name={name} />
       </td>
     </tr>
   );
