@@ -36,6 +36,9 @@ export const CoinRow = ({ coin, index, currency }) => {
       <td>
         {currency === "USD" ? "US$" : "$"} {total_volume}
       </td>
+      <td>
+        <i>icon</i>
+      </td>
     </tr>
   );
 };

@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.link {
+  background-color: black;
+  padding: .4em;
+  border-radius: .4em;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: .1s;
+}
+
+.link:hover {
+  color: rgb(255, 204, 37);
+}
