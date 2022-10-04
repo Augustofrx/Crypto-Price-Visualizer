@@ -60,7 +60,7 @@ export const CurrencyFormAndSearch = () => {
           </select>
         </div>
         <div>
-          <Link to="https://crypto-price-visualizer.netlify/favorites" className="link fs-6">
+          <Link to="/favorites" className="link fs-6">
             My favorites <ion-icon name="star" />
           </Link>
         </div>
