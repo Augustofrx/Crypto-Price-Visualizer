@@ -1,5 +1,6 @@
 const inititalState = {
-  favorites: []
+  favorites: [],
+  coin: []
 };
 
 const rootReducer = (state = inititalState, action) => {
@@ -14,6 +15,18 @@ const rootReducer = (state = inititalState, action) => {
       return {
          ...state,
          favorites:  action.payload
+        };
+    }
+    case "SET_COINS": {
+      return {
+         ...state,
+         coin:  action.payload
+        };
+    }
+    case "SET_CURRENCY": {
+      return {
+         ...state,
+         currency:  action.payload
         };
     }
 

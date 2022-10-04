@@ -7,8 +7,6 @@ export const FavoriteBtn = ({ name }) => {
   let favorites = useSelector((state) => state.favorites);
   const dispatch = useDispatch();
 
-
-
   const handleAddFavorites = (e, name, favorites) => {
     e.preventDefault();
     if (favorites.includes(name)) {
@@ -18,6 +16,10 @@ export const FavoriteBtn = ({ name }) => {
       dispatch(setFavorites(name));
     }
   };
+
+  
+  localStorage.setItem('favorites', JSON.stringify(favorites))
+  
   return (
     <button
       onClick={(e) => { showNotify(favorites, name); handleAddFavorites(e, name, favorites)}}

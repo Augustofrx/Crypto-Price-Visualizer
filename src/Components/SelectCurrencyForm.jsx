@@ -2,11 +2,17 @@ import React, { useCallback, useEffect, useState } from "react";
 import fetchCurrency from "../Utils/fetchCurrency";
 import { TableCoins } from "./Table_coins";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { set_coins } from "../Redux/Actions/Actions";
+import { setCurrencyType } from "../Redux/Actions/Actions";
 
 export const CurrencyFormAndSearch = () => {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
   const [currency, setCurrency] = useState("USD");
+
+  const dispatch = useDispatch();
+
 
   const handleCurrencyChange = useCallback(
     (e) => {
@@ -18,7 +24,12 @@ export const CurrencyFormAndSearch = () => {
 
   useEffect(() => {
     handleCurrencyChange();
-  }, [handleCurrencyChange]);
+    dispatch(set_coins(coins));
+    dispatch(setCurrencyType(currency))
+  }, [handleCurrencyChange, coins, dispatch, currency]);
+
+ 
+  localStorage.setItem('coins', JSON.stringify(coins))
 
   return (
     <div className="d-flex flex-column justify-content-center w-100">
@@ -55,6 +66,7 @@ export const CurrencyFormAndSearch = () => {
         </div>
       </form>
       <TableCoins coins={coins} search={search} currency={currency} />
+
     </div>
   );
 };

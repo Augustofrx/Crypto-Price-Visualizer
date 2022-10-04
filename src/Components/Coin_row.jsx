@@ -1,6 +1,7 @@
 import { setCurrencySymbol } from "../Utils/setCurrencySymbol";
 import { FavoriteBtn } from "./FavoriteBtn";
 
+
 import "../../src/App.css";
 
 export const CoinRow = ({ coin, index, currency }) => {
@@ -12,6 +13,8 @@ export const CoinRow = ({ coin, index, currency }) => {
     price_change_percentage_24h,
     total_volume,
   } = coin;
+
+ 
 
   return (
     <tr>

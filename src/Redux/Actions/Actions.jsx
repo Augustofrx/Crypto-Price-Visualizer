@@ -12,3 +12,18 @@ export const setFavorites = (payload) => {
       payload
     };
   };
+
+
+  export const set_coins = (payload) => {
+    return {
+      type: "SET_COINS",
+      payload
+    }
+  }
+
+  export const setCurrencyType = (payload) => {
+    return {
+      type: "SET_CURRENCY",
+      payload
+    }
+  }
