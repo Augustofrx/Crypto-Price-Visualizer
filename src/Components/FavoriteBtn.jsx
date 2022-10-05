@@ -29,5 +29,3 @@ export const FavoriteBtn = ({ name }) => {
     </button>
   );
 }
-
-

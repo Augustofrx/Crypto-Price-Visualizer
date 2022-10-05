@@ -23,7 +23,6 @@ export const Favorites = () => {
 
   const Titles = ["Coin", "Price", "Price Change", "24h Volume"];
 
-  console.log(coinsFiltered);
   return (
     <div className="container d-flex flex-column justify-content-center w-100">
       <div className="d-flex justify-content-center mt-4">

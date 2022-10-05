@@ -16,7 +16,7 @@ export const CurrencyFormAndSearch = () => {
   const handleCurrencyChange = useCallback(
     (e) => {
       setCurrency(e ? e.target.value : currency);
-      if(coins.length === 0) {
+      if(coins.length === 0 || currency) {
         fetchCurrency(currency, setCoins);
       }
     },
@@ -27,8 +27,8 @@ export const CurrencyFormAndSearch = () => {
 
     if(coin.length === 0){
       dispatch(set_coins(coins));
-      dispatch(setCurrencyType(currency));
     }
+    dispatch(setCurrencyType(currency));
     handleCurrencyChange();
   }, [handleCurrencyChange, coins, dispatch, currency, coin]);
 
