@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 export const FavoriteBtn = ({ name }) => {
   let favorites = useSelector((state) => state.favorites);
   const dispatch = useDispatch();
+  
 
   const handleAddFavorites = (e, name, favorites) => {
     e.preventDefault();

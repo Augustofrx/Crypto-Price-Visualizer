@@ -8,6 +8,7 @@ async function fetchCurrency(currency, setCoins) {
             currency === "USD" ? "USD" : "ARS"
           }&order=market_cap_desc&per_page=100&page=1&sparkline=false`
         );
+        console.log(res.data)
         setCoins(res.data);
 
 }
