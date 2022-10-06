@@ -16,16 +16,16 @@ export const CurrencyFormAndSearch = () => {
   const handleCurrencyChange = useCallback(
     (e) => {
       setCurrency(e ? e.target.value : currency);
-      if(coins.length === 0 || currency) {
+      if(currency) {
         fetchCurrency(currency, setCoins);
       }
     },
-    [currency, setCoins, setCurrency, coins]
+    [currency, setCoins, setCurrency]
   );
 
   useEffect(() => {
 
-    if(coin.length === 0){
+    if(!coin){
       dispatch(set_coins(coins));
     }
     dispatch(setCurrencyType(currency));
